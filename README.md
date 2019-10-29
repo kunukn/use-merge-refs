@@ -20,6 +20,7 @@ import {
   useThatThing,
   useAwesomeThing,
 } from 'some-3rd-party-lib';
+
 import useMergeRefs from '@kunukn/use-merge-refs';
 
 const MyComponent = () => {
