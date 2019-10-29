@@ -1,6 +1,11 @@
 import * as React from 'react';
 
-const useMergeRefs = (array = []) => {
+function useMergeRefs() {
+  let array: any = [];
+  let args = Array.prototype.slice.call(arguments);
+  if (args.length === 1 && Array.isArray(args[0])) array = args[0];
+  else array = args;
+
   let callbackRef = React.useCallback(
     element => {
       mergeRefs(array, element);
@@ -9,13 +14,12 @@ const useMergeRefs = (array = []) => {
   );
 
   return callbackRef;
-};
+}
 
 //export default useMergeRefs;
 module.exports = useMergeRefs;
 
-// Inspiration from https://github.com/smooth-code/react-merge-refs
-function mergeRefs(refs, element) {
+function mergeRefs(refs, element: HTMLElement) {
   refs.forEach(ref => {
     if (typeof ref === 'function') ref(element);
     else if (ref != null) ref.current = element;

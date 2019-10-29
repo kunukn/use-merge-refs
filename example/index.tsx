@@ -3,14 +3,14 @@ import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { useClickAway, useMeasure } from 'react-use';
 
-//import useMergeRefs from '../.';
-import useMergeRefs from '../dist/.';
+import useMergeRefs from '../.';
+//import useMergeRefs from '../dist/.';
 
 const App = () => {
   const refClickAway = React.useRef(null);
   const [refMeasure, { width, height }] = useMeasure();
 
-  let mergedRefs = useMergeRefs([refClickAway, refMeasure]);
+  let mergedRefs = useMergeRefs(refClickAway, refMeasure);
 
   useClickAway(refClickAway, () => {
     console.log('clicked outside', new Date());
