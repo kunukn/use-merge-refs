@@ -15,23 +15,36 @@ npm install @kunukn/use-merge-refs
 
 ```jsx
 import React from 'react';
+import {
+  useThisThing,
+  useThatThing,
+  useAwesomeThing,
+} from 'some-3rd-party-lib';
 import useMergeRefs from '@kunukn/use-merge-refs';
 
-const MyComponent = ({ children }) => {
-  const ref1 = React.useRef();
-  const ref2 = React.useRef();
+const MyComponent = () => {
+  // The 3rd party libs requires ref bindings.
+  const [ref1, componentHeight] = useThisThing();
+  const [ref2, componentWidth] = useThatThing();
+  const [ref3, componentPosition] = useAwesomeThing();
 
   // Merging the required ref bindings.
-  let mergedRefs = useMergeRefs([ref1, ref2]);
+  let mergedRefs = useMergeRefs(ref1, ref2, ref3);
 
-  return <div ref={mergedRefs}>{children}</div>;
+  // The 3rd party libs now all have access to the same element.
+  return (
+    <div ref={mergedRefs}>
+      <div>The height is: {componentHeight}</div>
+      <div>The width is: {componentWidth}</div>
+      <div>The position is: {componentPosition}</div>
+    </div>
+  );
 };
 ```
 
 ## Demo
 
 https://codesandbox.io/s/reactjs-mergeref-pattern-r1q2q
-
 
 ## Why?
 
