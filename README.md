@@ -3,7 +3,7 @@
 [![npm version](https://img.shields.io/npm/v/@kunukn/use-merge-refs.svg?style=flat-square)](https://www.npmjs.com/package/@kunukn/use-merge-refs)
 [![npm downloads](https://img.shields.io/npm/dm/@kunukn/use-merge-refs.svg?style=flat-square)](https://www.npmjs.com/package/@kunukn/use-merge-refs)
 [![gzip](https://img.shields.io/bundlephobia/minzip/@kunukn/use-merge-refs.svg)](https://bundlephobia.com/result?p=@kunukn/use-merge-refs)
-[![license](https://img.shields.io/github/license/kunukn/use-merge-refs.svg)](https://github.com/kunukn/use-merge-refs/blob/master/LICENSE)
+[![license](https://img.shields.io/github/license/kunukn/use-merge-refs)](https://github.com/kunukn/use-merge-refs/blob/master/LICENSE)
 
 React utility to merge refs
 
