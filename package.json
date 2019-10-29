@@ -1,6 +1,6 @@
 {
   "name": "@kunukn/use-merge-refs",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "license": "MIT",
   "author": "Kunuk Nykjær",
   "main": "dist/index.js",
