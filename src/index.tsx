@@ -8,7 +8,7 @@ module.exports = function useMergeRefs() {
 
   let callbackRef = React.useCallback(
     element => {
-      mergeRefs(array, element);
+      merge(array, element);
     },
     [...array]
   );
@@ -16,7 +16,7 @@ module.exports = function useMergeRefs() {
   return callbackRef;
 }
 
-function mergeRefs(refs, element: HTMLElement) {
+function merge(refs, element: HTMLElement) {
   refs.forEach(ref => {
     if (typeof ref === 'function') ref(element);
     else if (ref != null) ref.current = element;
