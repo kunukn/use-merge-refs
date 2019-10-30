@@ -9,6 +9,8 @@ React utility to merge refs
 
 ```sh
 npm install @kunukn/use-merge-refs
+# or 
+yarn @kunukn/use-merge-refs
 ```
 
 ## Example
@@ -29,12 +31,9 @@ const MyComponent = () => {
   const [ref2, componentWidth] = useThatThing();
   const [ref3, componentPosition] = useAwesomeThing();
 
-  // Merging the required ref bindings.
-  let mergedRefs = useMergeRefs(ref1, ref2, ref3);
-
   // The 3rd party libs now all have access to the same element.
   return (
-    <div ref={mergedRefs}>
+    <div ref={useMergeRefs(ref1, ref2, ref3)}>
       <div>The height is: {componentHeight}</div>
       <div>The width is: {componentWidth}</div>
       <div>The position is: {componentPosition}</div>
