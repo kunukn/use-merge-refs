@@ -40,6 +40,9 @@ const MyComponent = () => {
     </div>
   );
 };
+
+// You can also use an array as the argument. e.g.
+// useMergeRefs([ref1, ref2, ref3])
 ```
 
 ## Demo
