@@ -56,3 +56,8 @@ When you need multiple ref for the same Component. This helps merge the required
 # License
 
 MIT
+
+
+## Inspiration from:
+
+https://github.com/smooth-code/react-merge-refs
