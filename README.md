@@ -1,9 +1,9 @@
-# use-merge-refs
+# react-merge-refs
 
-[![npm version](https://img.shields.io/npm/v/@kunukn/use-merge-refs.svg?style=flat-square)](https://www.npmjs.com/package/@kunukn/use-merge-refs)
-[![npm downloads](https://img.shields.io/npm/dm/@kunukn/use-merge-refs.svg?style=flat-square)](https://www.npmjs.com/package/@kunukn/use-merge-refs)
-[![gzip](https://img.shields.io/bundlephobia/minzip/@kunukn/use-merge-refs.svg)](https://bundlephobia.com/result?p=@kunukn/use-merge-refs)
-[![license](https://img.shields.io/github/license/kunukn/use-merge-refs)](https://github.com/kunukn/use-merge-refs/blob/master/LICENSE)
+[![npm version](https://img.shields.io/npm/v/@kunukn/react-merge-refs.svg?style=flat-square)](https://www.npmjs.com/package/@kunukn/react-merge-refs)
+[![npm downloads](https://img.shields.io/npm/dm/@kunukn/react-merge-refs.svg?style=flat-square)](https://www.npmjs.com/package/@kunukn/react-merge-refs)
+[![gzip](https://img.shields.io/bundlephobia/minzip/@kunukn/react-merge-refs.svg)](https://bundlephobia.com/result?p=@kunukn/react-merge-refs)
+[![license](https://img.shields.io/github/license/kunukn/react-merge-refs)](https://github.com/kunukn/react-merge-refs/blob/master/LICENSE)
 
 React utility to merge refs
 
@@ -21,7 +21,7 @@ import {
   useAwesomeThing,
 } from 'some-3rd-party-lib';
 
-import useMergeRefs from '@kunukn/use-merge-refs';
+import mergeRefs from '@kunukn/react-merge-refs';
 
 const MyComponent = () => {
   // The 3rd party libs requires ref bindings.
@@ -29,12 +29,9 @@ const MyComponent = () => {
   const [ref2, componentWidth] = useThatThing();
   const [ref3, componentPosition] = useAwesomeThing();
 
-  // Merging the required ref bindings.
-  let mergedRefs = useMergeRefs(ref1, ref2, ref3);
-
   // The 3rd party libs now all have access to the same element.
   return (
-    <div ref={mergedRefs}>
+    <div ref={mergeRefs(ref1, ref2, ref3)}>
       <div>The height is: {componentHeight}</div>
       <div>The width is: {componentWidth}</div>
       <div>The position is: {componentPosition}</div>
