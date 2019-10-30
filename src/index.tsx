@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-module.exports = function useMergeRefs() {
+function useMergeRefs() {
   let array: any = [];
   let args = Array.prototype.slice.call(arguments);
   if (args.length === 1 && Array.isArray(args[0])) array = args[0];
@@ -22,3 +22,5 @@ function merge(refs, element: HTMLElement) {
     else if (ref != null) ref.current = element;
   });
 }
+
+module.exports = useMergeRefs;
