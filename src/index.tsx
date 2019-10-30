@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-function useMergeRefs() {
+function useMergeRefs(_params) {
   let array: any = [];
   let args = Array.prototype.slice.call(arguments);
   if (args.length === 1 && Array.isArray(args[0])) array = args[0];
