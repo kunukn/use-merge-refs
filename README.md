@@ -30,10 +30,12 @@ const MyComponent = () => {
   const [ref1, componentHeight] = useThisThing();
   const [ref2, componentWidth] = useThatThing();
   const [ref3, componentPosition] = useAwesomeThing();
+  
+  let mergedRefs = useMergeRefs(ref1, ref2, ref3);
 
   // The 3rd party libs now all have access to the same element.
   return (
-    <div ref={useMergeRefs(ref1, ref2, ref3)}>
+    <div ref={mergedRefs}>
       <div>The height is: {componentHeight}</div>
       <div>The width is: {componentWidth}</div>
       <div>The position is: {componentPosition}</div>
