@@ -10,7 +10,7 @@ React utility to merge refs
 ```sh
 npm install @kunukn/use-merge-refs
 # or 
-yarn @kunukn/use-merge-refs
+# yarn add @kunukn/use-merge-refs
 ```
 
 ## Example
