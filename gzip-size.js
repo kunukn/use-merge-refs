@@ -1,7 +1,7 @@
 const gzipSize = require('gzip-size');
 const fs = require('fs');
 
-fs.readFile('dist/mittt.cjs.production.min.js', 'utf8', function(
+fs.readFile('dist/use-merge-refs.cjs.production.min.js', 'utf8', function(
   err,
   contents
 ) {
