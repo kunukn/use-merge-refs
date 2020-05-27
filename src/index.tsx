@@ -23,4 +23,4 @@ function merge(refs, element: HTMLElement) {
   });
 }
 
-module.exports = useMergeRefs;
+export default useMergeRefs;
