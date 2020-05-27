@@ -7,17 +7,17 @@ function useMergeRefs(_params) {
   else array = args;
 
   let callbackRef = React.useCallback(
-    element => {
+    (element) => {
       merge(array, element);
     },
-    [...array]
+    [array]
   );
 
   return callbackRef;
 }
 
 function merge(refs, element: HTMLElement) {
-  refs.forEach(ref => {
+  refs.forEach((ref) => {
     if (typeof ref === 'function') ref(element);
     else if (ref != null) ref.current = element;
   });

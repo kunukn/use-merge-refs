@@ -13,7 +13,8 @@
     "start": "tsdx watch",
     "build": "tsdx build",
     "test": "tsdx test --env=jsdom",
-    "lint": "tsdx lint"
+    "lint": "tsdx lint",
+    "gzip": "node gzip-size.js"
   },
   "peerDependencies": {
     "react": ">=16"
@@ -33,7 +34,9 @@
     "@types/jest": "^24.0.21",
     "@types/react": "^16.9.11",
     "@types/react-dom": "^16.9.3",
+    "eslint-plugin-prettier": "^3.1.3",
     "husky": "^3.0.9",
+    "prettier": "^2.0.5",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
     "tsdx": "^0.11.0",
