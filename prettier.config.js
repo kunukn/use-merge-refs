@@ -4,4 +4,5 @@ module.exports = {
   semi: false,
   trailingComma: 'es5',
   endOfLine: 'auto',
+  arrowParens: 'avoid',
 };
